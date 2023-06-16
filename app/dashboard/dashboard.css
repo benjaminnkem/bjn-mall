@@ -1,0 +1,7 @@
+#dash-body {
+  grid-template-columns: 2fr 7fr;
+}
+
+.main-dash-side {
+  grid-template-columns: 2fr 6fr;
+}

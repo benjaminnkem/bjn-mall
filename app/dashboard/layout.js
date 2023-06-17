@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import "./dashboard.css";
 import "remixicon/fonts/remixicon.css";
-import PathNameCheck from "./PathNameCheck";
+import SidePanelLinks from "./sidePanelLinks";
 
 export const metadata = {
   title: "Dashboard",
@@ -10,14 +9,6 @@ export const metadata = {
 };
 
 export default function DashboardLayout({ children }) {
-  const pathname = <PathNameCheck />;
-  if (pathname === "/dashboard") {
-    console.log(pathname);
-    console.log("here");
-  } else {
-    console.log(pathname);
-    console.log("nope");
-  }
   return (
     <>
       <div className="grid h-full">
@@ -42,46 +33,7 @@ export default function DashboardLayout({ children }) {
             </div>
           </div>
 
-          <div className="mt-5">
-            <Link href="/dashboard">
-              <div
-                className={`grid grid-cols-3 hover:shadow-md items-center px-6 duration-200 hover:bg-stone-800 dark:hover:bg-stone-700 py-3 select-none ${
-                  pathname === "/dashboard" ? "border-l-2 border-stone-50" : "border-l-2 border-stone-50"
-                }`}
-              >
-                <i className="ri-home-3-fill text-2xl"></i>
-                <p className="hidden md:inline-block">Dashboard {pathname}</p>
-              </div>
-            </Link>
-            <Link href="/dashboard/products">
-              <div className="grid grid-cols-3 hover:shadow-md items-center px-6 duration-200 hover:bg-stone-800 dark:hover:bg-stone-700 py-3 select-none">
-                <i className="ri-shopping-cart-fill text-2xl"></i>
-                <p className="hidden md:inline-block">Products</p>
-              </div>
-            </Link>
-            <Link href="/dashboard/users">
-              <div className="grid grid-cols-3 hover:shadow-md items-center px-6 duration-200 hover:bg-stone-800 dark:hover:bg-stone-700 py-3 select-none">
-                <i className="ri-user-3-fill text-2xl"></i>
-                <p className="hidden md:inline-block">Users</p>
-              </div>
-            </Link>
-            <Link href="/dashboard/settings">
-              <div
-                className={`grid grid-cols-3 hover:shadow-md items-center px-6 duration-200 hover:bg-stone-800 dark:hover:bg-stone-700 py-3 select-none ${
-                  pathname === "/dashboard/settings" ? "border-l-2 border-stone-50" : ""
-                }`}
-              >
-                <i className="ri-settings-3-fill text-2xl"></i>
-                <p className="hidden md:inline-block">Account</p>
-              </div>
-            </Link>
-            <Link href="#">
-              <div className="grid grid-cols-3 hover:shadow-md items-center px-6 duration-200 hover:bg-stone-800 dark:hover:bg-stone-700 py-3 select-none">
-                <i className="ri-information-fill text-2xl"></i>
-                <p className="hidden md:inline-block">About</p>
-              </div>
-            </Link>
-          </div>
+          <SidePanelLinks />
 
           <div className="sticky bottom-2 mt-10 text-center">
             <p className="text-xs text-stone-500 bottom-3 left-1/2 right-1/2">Created by Benjamin Nkem</p>

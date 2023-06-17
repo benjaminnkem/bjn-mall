@@ -1,13 +1,9 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathName } from "next/navigation";
 
-export default function SideBarLinks() {
-  const pathname = usePathname();
-  return (
-    <>
-      <div>
-        ss
-      </div>
-    </>
-  );
-}
+const useClientPathNameCheck = () => {
+  const pathname = usePathName();
+  return { pathname };
+};
+
+export default useClientPathNameCheck;

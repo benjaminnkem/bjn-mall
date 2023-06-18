@@ -41,8 +41,10 @@ const SidePanelLinks = () => {
             <p className="hidden md:inline-block">Dashboard</p>
           </div>
         </Link>
-        <Link href="/dashboard/products">
-          <div className="grid items-center grid-cols-3 px-6 py-3 duration-75 select-none hover:shadow-md hover:bg-stone-800 dark:hover:bg-stone-700">
+        <Link href="/dashboard/store">
+          <div className={`grid items-center grid-cols-3 px-6 py-3 duration-75 select-none hover:shadow-md hover:bg-stone-800 dark:hover:bg-stone-700 ${
+              currentPath === "/dashboard/store" ? "border-l-2 border-stone-50" : ""
+            }`}>
             <i className="text-2xl ri-shopping-cart-fill"></i>
             <p className="hidden md:inline-block">Products</p>
           </div>

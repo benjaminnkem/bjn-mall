@@ -1,6 +1,7 @@
 import "./dashboard.css";
 import "remixicon/fonts/remixicon.css";
 import SidePanelLinks from "./SidePanelLinks";
+import Loading from "./loading";
 
 export const metadata = {
   title: "Dashboard",

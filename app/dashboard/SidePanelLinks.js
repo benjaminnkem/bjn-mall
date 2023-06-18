@@ -3,28 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import "./styles/sidebar.css";
+
 const SidePanelLinks = () => {
   const currentPath = usePathname();
 
   return (
-    <aside className="overflow-x-hidden bg-stone-900 dark:bg-stone-800 text-stone-50 h-full fixed lg:w-[320px] md:w-[280px] w-[80px] duration-200">
+    <aside className="overflow-x-hidden bg-stone-900 dark:bg-stone-800 text-stone-50 h-full fixed lg:w-[320px] md:w-[280px] w-[80px] duration-200 z-10">
       <div className="px-6">
         <div className="flex items-center justify-between py-3">
           <h1 className="hidden text-2xl sm:inline-block">BjnMall</h1>
           <i className="text-2xl ri-menu-2-line hover:cursor-pointer"></i>
         </div>
         <div className="mt-3 text-center">
-          <div className="overflow-hidden">
+          <div className="relative" id="admin-image">
             <Image
               src={`/images/admin1.jpg`}
               alt="Admin Pic"
               width={100}
               height={100}
-              className="mx-auto rounded-full"
+              className="relative mx-auto rounded-full"
               draggable="false"
             ></Image>
           </div>
-          <p className="mt-3 text-xs font-semibold text-stone-200">Admin Name</p>
+          <p className="mt-3 text-xs font-semibold text-stone-200">Nkem Benjamin</p>
         </div>
       </div>
 

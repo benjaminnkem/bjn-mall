@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Admin Name - Settings',
+}
+
 export default function SettingManager() {
   return (
     <>
